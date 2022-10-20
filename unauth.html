@@ -7,6 +7,28 @@
 <script  src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
 <title>Unauthenticated</title>
 </head>
+<script>
+    window.lpTag = window.lpTag || {};
+    lpTag.sdes = lpTag.sdes||[];
+    lpTag.identities = [];
+    lpTag.sdes.push(
+        {
+            "type": "cart", //MANDATORY
+            "total": 25.0, //TOTAL CART VALUE
+            "currency": "USD", //CURRENCY CODE
+            "numItems": 1, //NUMBER OF ITEMS IN CART
+            "products": [{ //ARRAY OF PRODUCTS
+                "product": {
+                "name": "Title : Unauth Online Shopping", //PRODUCT NAME
+                "category": "Sports", //PRODUCT CATEGORY NAME
+                "sku": "sku", //PRODUCT SKU OR UNIQUE IDENTIFIER
+                "price": 25 //PRODUCT PRICE
+                }
+            }],
+            "quantity": 1 
+        }
+    );
+</script>
 <body>
     <div><button style="background-color: rgb(225, 128, 128)">
         <a href='webmessaging.html' target='_blank' style="text-decoration: none">Home</a>
