@@ -10,6 +10,18 @@
 <script>
     window.lpTag = window.lpTag || {};
     lpTag.sdes = lpTag.sdes||[];
+ lpTag.identities = [];
+
+
+function identityFn(callback) {
+    callback({
+        iss: "https://www.YourBrand.com",
+        acr: "loa1",
+        sub: "4255551212"
+    });
+}
+
+lpTag.identities.push(identityFn);
     lpTag.sdes.push(
         {
             "type": "cart", //MANDATORY
